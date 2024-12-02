@@ -36,7 +36,7 @@ class WeatherActivity : AppCompatActivity() {
     private fun fetchWeatherData() {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.openweather.org")
-            //.addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val weatherService = retrofit.create(WeatherService::class.java)
